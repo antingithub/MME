@@ -1,0 +1,204 @@
+#
+#
+
+info: "version:7"
+
+period:
+  historical: 'historical'
+  near-future:
+  end-of-century:
+
+observations:
+  temperature:
+    dataset_path: '..\data\observations\temp'
+    output_path: '..\data\observations\temp\output'
+    date:
+      start:
+        year: 1971
+        month: 1
+        day: 1
+      end:
+        year: 2017
+        month: 12
+        day: 31
+    column: 17
+
+
+  percepitation:
+    dataset_path: '..\data\observations\prec'
+    output_path: '..\data\observations\prec\output'
+    date:
+      start:
+        year: 1971
+        month: 1
+        day: 1
+      end:
+        year: 2017
+        month: 12
+        day: 31
+    column:
+
+
+models:
+  columns: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+  cordex:
+    dataset_path: '..\data\cordex'
+    output_path: '..\data\cordex\output'
+    time:
+      start:
+        year: 1971
+        month:
+        day:
+      end:
+        year:
+        month:
+        day:
+      hour_interval: 3
+      timestamp:
+        start: '01-01-1971 03'
+        end: '31-12-2005 21'
+        freq: '3H'
+    variables:
+      temperature:
+        filename: 'Forc2m_TA.txt'
+    raw_names:
+      0: CNRM-CERFACS-CNRM-CM5_historical_r1i1p1_CNRM-ALADIN63_v2
+      1: CNRM-CERFACS-CNRM-CM5_historical_r1i1p1_DMI-HIRHAM5_v2
+      2: CNRM-CERFACS-CNRM-CM5_historical_r1i1p1_SMHI-RCA4_v1
+      3: ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1
+      4: ICHEC-EC-EARTH_historical_r3i1p1_DMI-HIRHAM5_v2
+      5: IPSL-IPSL-CM5A-MR_historical_r1i1p1_SMHI-RCA4_v1
+      6: MOHC-HadGEM2-ES_historical_r1i1p1_ICTP-RegCM4-6_v1
+      7: MOHC-HadGEM2-ES_historical_r1i1p1_SMHI-RCA4_v1
+      8: MPI-M-MPI-ESM-LR_historical_r1i1p1_CLMcom-ETH-COSMO-crCLIM-v1-1_v1
+      9: MPI-M-MPI-ESM-LR_historical_r1i1p1_DMI-HIRHAM5_v1
+      10: MPI-M-MPI-ESM-LR_historical_r1i1p1_ICTP-RegCM4-6_v1
+      11: MPI-M-MPI-ESM-LR_historical_r1i1p1_SMHI-RCA4_v1a
+      12: MPI-M-MPI-ESM-LR_historical_r3i1p1_GERICS-REMO2015_v1
+      13: NCC-NorESM1-M_historical_r1i1p1_CLMcom-ETH-COSMO-crCLIM-v1-1_v1
+      14: NCC-NorESM1-M_historical_r1i1p1_DMI-HIRHAM5_v3
+      15: NCC-NorESM1-M_historical_r1i1p1_GERICS-REMO2015_v1
+      16: NCC-NorESM1-M_historical_r1i1p1_SMHI-RCA4_v1
+  surfex:
+    dataset_path: '..\data\surfex'
+    output_path: '..\data\surfex\output'
+    time:
+      start:
+        year: 1971
+        month:
+        day:
+      end:
+        year:
+        month:
+        day:
+      hour_interval: 3
+      timestamp:
+        start: '01-01-1971 03'
+        end: '31-12-2005 21'
+        freq: '3H'
+    variables:
+      temperature:
+        filename: 'Hourly_T2m.txt'
+    raw_names:
+      0: CNRM-CERFACS-CNRM-CM5_historical_r1i1p1_CNRM-ALADIN63_v2
+      1: CNRM-CERFACS-CNRM-CM5_historical_r1i1p1_DMI-HIRHAM5_v2
+      2: CNRM-CERFACS-CNRM-CM5_historical_r1i1p1_SMHI-RCA4_v1
+      3: ICHEC-EC-EARTH_historical_r12i1p1_SMHI-RCA4_v1
+      4: ICHEC-EC-EARTH_historical_r3i1p1_DMI-HIRHAM5_v2
+      5: IPSL-IPSL-CM5A-MR_historical_r1i1p1_SMHI-RCA4_v1
+      6: MOHC-HadGEM2-ES_historical_r1i1p1_ICTP-RegCM4-6_v1
+      7: MOHC-HadGEM2-ES_historical_r1i1p1_SMHI-RCA4_v1
+      8: MPI-M-MPI-ESM-LR_historical_r1i1p1_CLMcom-ETH-COSMO-crCLIM-v1-1_v1
+      9: MPI-M-MPI-ESM-LR_historical_r1i1p1_DMI-HIRHAM5_v1
+      10: MPI-M-MPI-ESM-LR_historical_r1i1p1_ICTP-RegCM4-6_v1
+      11: MPI-M-MPI-ESM-LR_historical_r1i1p1_SMHI-RCA4_v1a
+      12: MPI-M-MPI-ESM-LR_historical_r3i1p1_GERICS-REMO2015_v1
+      13: NCC-NorESM1-M_historical_r1i1p1_CLMcom-ETH-COSMO-crCLIM-v1-1_v1
+      14: NCC-NorESM1-M_historical_r1i1p1_DMI-HIRHAM5_v3
+      15: NCC-NorESM1-M_historical_r1i1p1_GERICS-REMO2015_v1
+      16: NCC-NorESM1-M_historical_r1i1p1_SMHI-RCA4_v1
+
+ensembles:
+  alpha:
+    info: ''
+    column: 19
+  beta:
+    info: ''
+    column: 18
+
+
+
+
+
+plots:
+  plots_path: '..\plots'
+  output: '..\plots\output'
+  names_markers:
+    0: !!python/tuple
+    - CNRMCM5_ALADIN
+    - '*'
+    1: !!python/tuple
+    - CNRMCM5_HIRHAM
+    - '*'
+    2: !!python/tuple
+    - CNRMCM5_SMHIRCA
+    - '*'
+    3: !!python/tuple
+    - ECEARTH_SMHIRCA
+    - +
+    4: !!python/tuple
+    - ECEARTH_HIRHAM
+    - +
+    5: !!python/tuple
+    - IPSLCM5-SMHIRCA
+    - d
+    6: !!python/tuple
+    - HADGEM_REGCM
+    - '1'
+    7: !!python/tuple
+    - HADGEM_SMHIRCA
+    - '1'
+    8: !!python/tuple
+    - MPIESM_COSMO
+    - o
+    9: !!python/tuple
+    - MPIESM_HIRHAM
+    - o
+    10: !!python/tuple
+    - MPIESM_REGCM
+    - o
+    11: !!python/tuple
+    - MPIESM_SMHIRCA
+    - o
+    12: !!python/tuple
+    - MPIESM_REMO
+    - o
+    13: !!python/tuple
+    - NORESM_COSMO
+    - ^
+    14: !!python/tuple
+    - NORESM_HIRHAM
+    - ^
+    15: !!python/tuple
+    - NORESM_REMO
+    - ^
+    16: !!python/tuple
+    - NORESM_SMHIRCA
+    - ^
+    18: !!python/tuple
+    - EnsembleBeta
+    - $B$
+    19: !!python/tuple
+    - EnsembleAlfa
+    - $A$
+
+
+dates:
+  seasons_dict: {'DJF':[12,1,2],'MAM':[3,4,5],'JJA':[6,7,8],'SON':[9,10,11]}
+  hours: [0, 3, 6, 9, 12, 15, 18, 21]
+
+
+
+metrics:
+  func: {'bias':bias, 'sigma':sigma_score, 'perkins':perkins_skill_score, 'yk':yk_skewness}
+  symbols: {'bias': '|Bias|', 'perkins': '|S|', 's': '|S|', 'sigma': '|$\sigma_n-1$|', 'yk': '|YK|'}
